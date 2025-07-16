@@ -35,11 +35,11 @@ cd llm-chargeback-verification
 
 2. Create & activate a virtual environment
 
-# Windows PowerShell
+### Windows PowerShell
 token python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-# macOS/Linux
+### macOS/Linux
 python3 -m venv .venv
 source .venv/bin/activate
 
@@ -50,10 +50,10 @@ pip install -r requirements.txt
 
 4. Configure environment variables
 
-# OpenAI API key
+### OpenAI API key
 export OPENAI_API_KEY="sk-..."
 
-# Pinecone configuration
+### Pinecone configuration
 env: PINECONE_API_KEY="<your-pinecone-api-key>"
 env: PINECONE_INDEX_NAME="llm-evidence-index"
 env: PINECONE_ENV_REGION="us-east1-gcp"  # optional, defaults to this value
