@@ -30,39 +30,53 @@ This project is a proof of concept of an AI-powered copilot for verifying PDF‑
 
 1. Clone the repository
 
+```
 git clone https://github.com/<YOUR_USERNAME>/llm-chargeback-verification.git
 cd llm-chargeback-verification
+```
 
 2. Create & activate a virtual environment
 
 ### Windows PowerShell
+```
 token python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+```
 
 ### macOS/Linux
+```
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 3. Install dependencies
 
+```
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 4. Configure environment variables
 
 ### OpenAI API key
+```
 export OPENAI_API_KEY="sk-..."
+```
 
 ### Pinecone configuration
+```
 env: PINECONE_API_KEY="<your-pinecone-api-key>"
 env: PINECONE_INDEX_NAME="llm-evidence-index"
 env: PINECONE_ENV_REGION="us-east1-gcp"  # optional, defaults to this value
+```
 
 On Windows PowerShell:
+```
 $env:OPENAI_API_KEY = "sk-..."
 $env:PINECONE_API_KEY = "<your-pinecone-api-key>"
 $env:PINECONE_INDEX_NAME = "llm-evidence-index"
 $env:PINECONE_ENV_REGION = "us-east1-gcp"
+```
 
 ## Usage
 
@@ -76,6 +90,7 @@ python src/main.py --input data/sample.pdf --output results.json
 
 After execution, results.json will contain an array of objects:
 
+```
 [
   {
     "text": "...",
@@ -86,9 +101,11 @@ After execution, results.json will contain an array of objects:
   },
   ...
 ]
+```
 
 ## 📂 Project Structure
 
+```
 llm-chargeback-verification/
 ├── src/                          # Source code
 │   ├── main.py                   # Entry point
@@ -103,6 +120,7 @@ llm-chargeback-verification/
 ├── requirements.txt              # Python dependencies
 ├── .gitignore
 └── README.md
+```
 
 ## Customization & Next Steps
 
